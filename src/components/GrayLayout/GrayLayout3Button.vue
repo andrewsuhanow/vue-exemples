@@ -1,21 +1,11 @@
 <template>
   <div class="fon">
 
-    <ul class="ulEl">
-      <li>
-        <a href="#" >222222</a>
-      </li>
-      <li>
-        <a href="#">222222</a>
-      </li>
-      <li>
-        <a href="#">222222</a>
-      </li>
-    </ul>
+    <button @click="$emit('FOOclick')"> передать выше</button>
+
 
   </div>
 </template>
-
 
 
 <style scoped>

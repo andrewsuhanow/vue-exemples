@@ -1,7 +1,8 @@
 <template>
   <div class="fon">
     <h1>--------GrayLayout--------</h1>
-    <GrayLayout3Button></GrayLayout3Button>
+    <span>{{ mm1 }}</span>
+    <GrayLayout3Button @FOOclick="mm1 = 'ggg'"></GrayLayout3Button>
     <GrayLayoutList></GrayLayoutList>
 
   </div>
@@ -15,7 +16,8 @@ GrayLayout3Button
   export default {
     data(){
       return{
-        layout: 'GrayLayout'
+        layout: 'GrayLayout',
+        mm1: 'null'
       }
     },
     components: {

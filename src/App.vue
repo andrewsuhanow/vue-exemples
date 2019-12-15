@@ -35,13 +35,18 @@ import WhiteLayout from '@/layout/WhiteLayout.vue'
 export default {
   data(){
     return{
-      layout: 'GrayLayout',
+      // layout: 'GrayLayout',
     }
   },
   components: {
     GrayLayout,
     WhiteLayout,
     DarcLayout
+  },
+  computed:{
+    layout(){
+      return (this.$route.meta.layout) + "Layout"
+    }
   }
 }
 </script>

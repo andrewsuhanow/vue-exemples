@@ -4,6 +4,10 @@
     <button @click="click1"> {{ msg }}</button>
     <input type="text" @input="msg = $event.target.value">
     <div>fffff:  {{ msg }}</div>
+    <br>
+
+
+
 
   </div>
 </template>
