@@ -1,32 +1,57 @@
 <template>
   <div id="app">
-    <div id="nav">
+
+
+
+
+    <component :class="layout" :is="layout">    </component>
+    <router-view/>
+
+    <div id="nav" class="myBody">
+
+
+
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+      <button class="btn btn-primary">111</button>
+
     </div>
-    <router-view/>
+
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
+<script>
+import GrayLayout from '@/layout/GrayLayout.vue'
+import DarcLayout from '@/layout/DarcLayout.vue'
+import WhiteLayout from '@/layout/WhiteLayout.vue'
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+export default {
+  data(){
+    return{
+      layout: 'GrayLayout',
+    }
+  },
+  components: {
+    GrayLayout,
+    WhiteLayout,
+    DarcLayout
+  }
 }
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
+
+  @import '~bootstrap/dist/css/bootstrap.css';
+
+  .myBody{
+    padding-top: 100px;
+  }
+
 </style>
